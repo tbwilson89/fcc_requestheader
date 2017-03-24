@@ -3,8 +3,6 @@ var app = express()
 var port = process.env.PORT || 8080
 
 app.get('/', function(req, res) {
-  //console.log(req)
-  //console.log('divide', req.headers['user-agent'])
   
   var lang = req.headers['accept-language'].slice(0, req.headers['accept-language'].indexOf(','))
   var software = req.headers['user-agent'].slice(req.headers['user-agent'].indexOf('(')+1, req.headers['user-agent'].indexOf(')'))
